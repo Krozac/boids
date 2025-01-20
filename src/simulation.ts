@@ -7,7 +7,7 @@ export function startSimulation(ctx: CanvasRenderingContext2D) {
     const boids: Boid[] = [];
 
     // Create initial boids
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 500; i++) {
         boids.push(new Boid(Math.random() * canvas.width, Math.random() * canvas.height));
     }
 

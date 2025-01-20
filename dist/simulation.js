@@ -4,7 +4,7 @@ export function startSimulation(ctx) {
     const canvas = ctx.canvas;
     const boids = [];
     // Create initial boids
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 500; i++) {
         boids.push(new Boid(Math.random() * canvas.width, Math.random() * canvas.height));
     }
     function drawBoid(boid) {
