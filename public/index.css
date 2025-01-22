@@ -1,0 +1,7 @@
+body{
+    background-color:#171717;
+}
+
+canvas{
+    mix-blend-mode: difference;
+}
