@@ -1,4 +1,4 @@
-const simComponents = {
+{
     "entities": [
         {
             "id": "BoidEntity",
