@@ -17,6 +17,20 @@
     <link rel="stylesheet" href="./public/index.css"/>
 </head>
 <body>
-    <script src="./dist/index.js" type="module" defer></script>
+    <script type="module">
+        import {init, gameLoop} from './dist/main.js';
+
+        const canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);
+        canvas.width = 1500;
+        canvas.height = 1500;
+        const context = canvas.getContext('2d');
+
+
+        window.onload = () =>{
+            init(context,200);
+            gameLoop();
+        }
+    </script>
 </body>
 </html>
