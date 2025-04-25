@@ -11,7 +11,9 @@ export class BoidSystem {
         alignmentFactor: number,
         centeringFactor: number,
     };
-    
+    public canvasWidth: number;
+    public canvasHeight: number;
+
     constructor(entityManager: EntityManager) {
         this.entityManager = entityManager;
 
@@ -20,6 +22,9 @@ export class BoidSystem {
             alignmentFactor: 0.05,
             centeringFactor: 0.0005,
         };
+
+        this.canvasWidth = 0;
+        this.canvasHeight = 0;
     }
 
     update() {
@@ -59,9 +64,9 @@ export class BoidSystem {
             velocity.y = boid.minSpeed;
         }
 
-        if (position.x < 1500) velocity.x += boid.turnFactor;
+        if (position.x < this.canvasWidth) velocity.x += boid.turnFactor;
         if (position.x > 0) velocity.x -=  boid.turnFactor;
-        if (position.y < 1500) velocity.y +=  boid.turnFactor;
+        if (position.y < this.canvasHeight) velocity.y +=  boid.turnFactor;
         if (position.y > 0) velocity.y -=  boid.turnFactor;
 
         acceleration.x = 0;
